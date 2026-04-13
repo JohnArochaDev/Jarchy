@@ -18,7 +18,10 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --external react",
     "release:patch": "npm run build && npm version patch && npm publish",
-    "release:minor": "npm run build && npm version minor && npm publish"
+    "release:minor": "npm run build && npm version minor && npm publish",
+    "release:major": "npm run build && npm version major && npm publish",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
@@ -26,7 +29,18 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "storybook": "^10.3.5",
+    "@storybook/react-vite": "^10.3.5",
+    "@chromatic-com/storybook": "^5.1.1",
+    "@storybook/addon-vitest": "^10.3.5",
+    "@storybook/addon-a11y": "^10.3.5",
+    "@storybook/addon-docs": "^10.3.5",
+    "@storybook/addon-onboarding": "^10.3.5",
+    "vitest": "^4.1.4",
+    "playwright": "^1.59.1",
+    "@vitest/browser-playwright": "^4.1.4",
+    "@vitest/coverage-v8": "^4.1.4"
   },
   "peerDependencies": {
     "react": ">=17",
