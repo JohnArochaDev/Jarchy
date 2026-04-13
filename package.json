@@ -14,7 +14,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react"
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "release:patch": "npm run build && npm version patch && npm publish",
+    "release:minor": "npm run build && npm version minor && npm publish"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
