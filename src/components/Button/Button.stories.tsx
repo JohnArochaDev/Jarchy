@@ -6,9 +6,9 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: 'centered', // Styling for the component in the Storybook canvas
   },
-  tags: ['autodocs'],
+  tags: ['autodocs'], // Creates documentation for the component
   args: {
     onClick: fn(),
   },
