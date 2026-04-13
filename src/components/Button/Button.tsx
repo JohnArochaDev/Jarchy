@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 export interface ButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
+  title: string
+  onClick?: () => void
 }
 
-export const Button = ({ children, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{children}</button>;
+export const Button = ({ title, onClick }: ButtonProps) => {
+  return <button onClick={onClick}>{title}</button>
 }
