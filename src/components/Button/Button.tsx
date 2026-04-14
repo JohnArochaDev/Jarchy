@@ -1,10 +1,12 @@
-import React from 'react'
+import styles from './Button.module.scss'
 
 export interface ButtonProps {
-  title: string
+  label?: string
   onClick?: () => void
 }
 
-export const Button = ({ title, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{title}</button>
+export const Button = (props: ButtonProps) => {
+  const { label = 'Button', onClick } = props
+
+  return <button className={styles.button} onClick={onClick}>{label}</button>
 }

@@ -1,0 +1,62 @@
+// ref https://dribbble.com/shots/23129994-Glassy-button
+.button {
+  padding: 9px 20px;
+  border-radius: 14px;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+
+  // starts with 0 end with 100, if needed add a 50% for a middle color
+  background: linear-gradient(180deg, #323232 0%, #222222 100%);
+
+  box-shadow:
+    // inner highlight (top edge)
+    inset 0 0.5px 1px 0px rgba(#ffffff, 0.15),
+    // inner shadow (all around)
+    inset 0 -1px 1.2px 1px #121212,
+    // drop shadow
+    0 2px 4px -1px rgba(#0d0d0d, 0.5),
+    // outer border ring
+    0 0 0 1px #333333;
+
+  transition:
+    // gradients can't interpolate in CSS — snaps instantly, kept for future-proofing
+    background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    // animates smoothly — creates the hover "lift" feel
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    // spring curve — overshoots slightly giving it a soft bubbly bounce
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    // fades from off-white to full white on hover
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    // slight scale-up on hover — the key to the bubbly feel
+    transform: scale(1.02);
+
+    box-shadow:
+      inset 0 0.5px 1px 0px rgba(#ffffff, 0.2),
+      inset 0 -1px 1.2px 1px #121212,
+      0 4px 12px -2px rgba(#000000, 0.5),
+      0 0 0 1px #444444;
+  }
+
+  &:active {
+    transform: scale(0.98);
+    background: linear-gradient(180deg, #1e1e1e 0%, #2a2a2a 100%);
+
+    box-shadow:
+      inset 0 1px 3px 0px rgba(#000000, 0.4),
+      inset 0 -0.5px 1px 0px rgba(#ffffff, 0.05),
+      0 1px 2px -1px rgba(#000000, 0.4),
+      0 0 0 1px #2a2a2a;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 3px;
+  }
+}

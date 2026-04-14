@@ -17,7 +17,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "build": "tsup",
     "release:patch": "npm run build && npm version patch && npm publish",
     "release:minor": "npm run build && npm version minor && npm publish",
     "release:major": "npm run build && npm version major && npm publish",
@@ -36,6 +36,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitest/browser-playwright": "^4.1.4",
     "@vitest/coverage-v8": "^4.1.4",
+    "esbuild-sass-plugin": "^3.7.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
@@ -47,6 +48,7 @@
     "prettier": "^3.8.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "sass": "^1.99.0",
     "storybook": "^10.3.5",
     "tsup": "^8.5.1",
     "typescript": "^6.0.2",
@@ -56,5 +58,8 @@
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17"
+  },
+  "dependencies": {
+    "geist": "^1.7.0"
   }
 }
