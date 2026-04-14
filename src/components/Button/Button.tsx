@@ -2,13 +2,14 @@ import { Themes } from '../../constants/types'
 import styles from './Button.module.scss'
 
 export interface ButtonProps {
+  disabled?: boolean
   label?: string
-  theme?: Themes
   onClick?: () => void
+  theme?: Themes
 }
 
 export const Button = (props: ButtonProps) => {
-  const { label = 'Button', onClick, theme = 'theme-black' } = props
+  const { disabled, label = 'Button', onClick, theme = 'theme-black' } = props
 
-  return <button className={`${theme} ${styles.button}`} onClick={onClick}>{label}</button>
+  return <button disabled={disabled} className={`${theme} ${styles.button}`} onClick={onClick}>{label}</button>
 }
