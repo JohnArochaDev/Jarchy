@@ -1,0 +1,25 @@
+.theme-black {
+  /*
+    Black color pallete
+  */
+
+  // gradients
+  --color-gradient-light: #464646;
+  --color-gradient-dark: #000000;
+  --color-gradient-dark-translucent: #00000080;
+
+  // active gradients
+  --color-active-gradient-dark: #1e1e1e;
+  --color-active-gradient-light: #2a2a2a;
+  --color-active: #2a2a2a;
+
+  // box shadows
+  --color-shadow: #121212;
+  --color-shadow-hover: #444444;
+
+  // highlights
+  --color-highlight: #ffffff;
+  --color-highlight-translucent-least: #ffffff26;
+  --color-highlight-translucent-middle: #ffffff33;
+  --color-text-muted: #ffffff66;
+}
