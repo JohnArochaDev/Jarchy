@@ -22,4 +22,115 @@
   --color-highlight-translucent-least: #ffffff26;
   --color-highlight-translucent-middle: #ffffff33;
   --color-text-muted: #ffffff66;
+
+  // text
+  --text-color: #ffffff;
+}
+
+.theme-white {
+  /*
+    White color pallete
+  */
+
+  // gradients
+  --color-gradient-light: #ffffff;
+  --color-gradient-dark: #b9b9b9;
+  --color-gradient-dark-translucent: #ffffff80;
+
+  // active gradients
+  --color-active-gradient-dark: #d5d5d5;
+  --color-active-gradient-light: #e1e1e1;
+  --color-active: #d5d5d5;
+
+  // box shadows
+  --color-shadow: #ededed;
+  --color-shadow-hover: #bbbbbb;
+
+  // highlights
+  --color-highlight: #000000;
+  --color-highlight-translucent-least: #00000026;
+  --color-highlight-translucent-middle: #00000033;
+  --color-text-muted: #00000066;
+
+  // text
+  --text-color: #000000;
+}
+
+.theme-green {
+  /*
+    White color pallete
+  */
+
+  // gradients
+  --color-gradient-light: #baffb1;
+  --color-gradient-dark: #74dd6b;
+  --color-gradient-dark-translucent: #00000080;
+
+  // active gradients
+  --color-active-gradient-dark: #92fb89;
+  --color-active-gradient-light: #9eff95;
+  --color-active: #9eff95;
+
+  // box shadows
+  --color-shadow: #86ef7d;
+  --color-shadow-hover: #b8ffaf;
+
+  // highlights
+  --color-highlight: #ffffff;
+  --color-highlight-translucent-least: #ffffff26;
+  --color-highlight-translucent-middle: #ffffff33;
+  --color-text-muted: #ffffff66;
+
+  // text
+  --text-color: #fff;
+}
+
+.theme-red {
+  /*
+    Red color pallete
+  */
+
+  // gradients
+  --color-gradient-light: #ff6b6b;
+  --color-gradient-dark: #c0392b;
+  --color-gradient-dark-translucent: #00000080;
+
+  // active gradients
+  --color-active-gradient-dark: #e84040;
+  --color-active-gradient-light: #f55252;
+  --color-active: #f55252;
+
+  // box shadows
+  --color-shadow: #d63031;
+  --color-shadow-hover: #ff7675;
+
+  // highlights
+  --color-highlight: #ffffff;
+  --color-highlight-translucent-least: #ffffff26;
+  --color-highlight-translucent-middle: #ffffff33;
+  --color-text-muted: #ffffff66;
+
+  // text
+  --text-color: #fff;
+}
+
+// for development and making new themes
+.hues-by-color {
+
+  // solid — brightest to dullest
+  --color-highlight: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --color-gradient-light: rgb(70, 70, 70);
+  --color-shadow-hover: rgb(68, 68, 68);
+  --color-active-gradient-light: rgb(42, 42, 42);
+  --color-active: rgb(42, 42, 42);
+  --color-active-gradient-dark: rgb(30, 30, 30);
+  --color-shadow: rgb(18, 18, 18);
+  --color-gradient-dark: rgb(0, 0, 0);
+
+  // translucent — brightest to dullest
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-highlight-translucent-middle: rgba(255, 255, 255, 0.2);
+  --color-highlight-translucent-least: rgba(255, 255, 255, 0.149);
+  --color-gradient-dark-translucent: rgba(0, 0, 0, 0.502);
 }

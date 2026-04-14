@@ -1,9 +1,10 @@
+import { Themes } from '../../constants/types'
 import styles from './Button.module.scss'
 
 export interface ButtonProps {
   label?: string
+  theme?: Themes
   onClick?: () => void
-  theme?: string
 }
 
 export const Button = (props: ButtonProps) => {
