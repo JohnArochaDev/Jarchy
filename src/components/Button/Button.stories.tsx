@@ -18,6 +18,7 @@ export const Default: Story = {
   args: {
     label: 'Button',
     disabled: false,
+    type: 'button',
     toggle: false,
     onClick: () => {},
     toggledState: false,

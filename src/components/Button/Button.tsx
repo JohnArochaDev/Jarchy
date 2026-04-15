@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Themes } from '../../constants/types'
 import styles from './Button.module.scss'
 
+type Types = 'submit' | 'reset' | 'button'
+
 export interface ButtonProps {
   /** Disables the button, preventing interaction and applying disabled styling. */
   disabled?: boolean
@@ -19,6 +21,11 @@ export interface ButtonProps {
    */
   theme?: Themes
   /**
+   * The buttons default behavior
+   * @default "button"
+   */
+  type?: Types
+  /**
    * When true, the button maintains an active/selected state on each click,
    * toggling between selected and unselected on subsequent clicks.
    */
@@ -30,27 +37,13 @@ export interface ButtonProps {
   toggledState?: boolean
 }
 
-/**
- * A general-purpose button component with optional theme and toggle behavior.
- *
- * @example
- * // Basic usage
- * <Button label="Save" onClick={() => console.log('saved')} />
- *
- * @example
- * // Themed and toggleable
- * <Button label="Like" theme="theme-green" toggle onClick={() => console.log('toggled')} />
- *
- * @example
- * // Disabled state
- * <Button label="Submit" disabled onClick={() => {}} />
- */
 export const Button = (props: ButtonProps) => {
   const {
     disabled,
     label = 'Button',
     onClick,
     theme = 'theme-black',
+    type = 'button',
     toggle,
     toggledState = false,
   } = props
@@ -77,6 +70,7 @@ export const Button = (props: ButtonProps) => {
       disabled={disabled}
       className={`${theme} ${styles.button} ${toggleClass()}`}
       onClick={clickWithToggle}
+      type={type}
     >
       {label}
     </button>
