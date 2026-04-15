@@ -23,11 +23,6 @@ export interface ButtonProps {
    */
   theme?: Themes
   /**
-   * The buttons default behavior
-   * @default "button"
-   */
-  type?: Types
-  /**
    * When true, the button maintains an active/selected state on each click,
    * toggling between selected and unselected on subsequent clicks.
    */
@@ -37,6 +32,11 @@ export interface ButtonProps {
    * @default false
    */
   toggledState?: boolean
+  /**
+   * The buttons default behavior
+   * @default "button"
+   */
+  type?: Types
 }
 
 export const Button = (props: ButtonProps) => {
@@ -46,9 +46,9 @@ export const Button = (props: ButtonProps) => {
     label = 'Button',
     onClick,
     theme = 'theme-black',
-    type = 'button',
     toggle,
     toggledState = false,
+    type = 'button',
   } = props
 
   const [toggleState, setToggleState] = useState<boolean>(toggledState)

@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import styles from './styles.module.scss'
 
 type InputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
@@ -13,6 +11,8 @@ export interface InputProps {
   errors?: string[]
   /** Label text rendered above the input. */
   label?: string
+  /** Called with the current input value on every keystroke. */
+  onChange: (value: string) => void
   /** Placeholder text shown when the input is empty. */
   placeholder?: string
   /**
@@ -25,7 +25,7 @@ export interface InputProps {
    * @default 'text'
    */
   type?: InputType
-  /** Initial value of the input. */
+  /** The controlled value of the input. */
   value: string
 }
 
@@ -34,13 +34,12 @@ export const Input = (props: InputProps) => {
     classname,
     errors,
     label,
+    onChange,
     placeholder,
     size = 'md',
     type = 'text',
     value,
   } = props
-
-  const [inputValue, setInputValue] = useState<string>(value ?? '')
 
   const formattedErrors = errors?.join(', ')
 
@@ -62,8 +61,8 @@ export const Input = (props: InputProps) => {
           .join(' ')}
         type={type}
         placeholder={placeholder ?? ''}
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
 
       {formattedErrors && (

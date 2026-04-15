@@ -1,0 +1,39 @@
+.input {
+  padding: 7px 16px;
+  border-radius: 1em / 1.3em;
+  font-size: 14px;
+  font-family: 'Geist Mono', monospace;
+  border: 1px solid grey;
+  min-width: 80px;
+
+  &:not(.error):focus {
+    outline: none;
+    border-color: #c9c9c9;
+    box-shadow: 0 0 0 2px #00000019, 
+    0 0 12px 0px #00000022;
+  }
+
+  &.error {
+    outline: none;
+    border-color: #ff4444;
+    box-shadow: 0 0 0 2px #ff000040,
+    0 0 12px 0px #ff000055;
+  }
+}
+
+.label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  margin-bottom: 3px;
+  padding-left: 7px;
+  color: grey;
+}
+
+.bottomError {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  margin-top: 3px;
+  align-content: center;
+  padding-left: 7px;
+  color: #ff4444;
+}

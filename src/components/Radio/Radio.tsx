@@ -8,12 +8,12 @@ export interface RadioProps {
   className?: string
   /** Classname for custom styling on the outer container element. */
   containerClassname?: string
+  /** Groups radios at the HTML level to enforce mutual exclusion. */
+  group?: string
   /** Text label rendered beside the radio. */
   label?: string
   /** Classname for custom styling on the label text. */
   labelClassname?: string
-  /** Groups radios at the HTML level to enforce mutual exclusion. */
-  group?: string
   /** Called with this radio's value when selected. */
   onChange: (value: string) => void
   /**
@@ -30,9 +30,9 @@ export const Radio = (props: RadioProps) => {
     checked,
     className,
     containerClassname,
+    group,
     label,
     labelClassname,
-    group,
     onChange,
     theme = 'theme-black',
     value,

@@ -9,7 +9,6 @@
 - [x] **Radio / RadioGroup** — Single-select option list
 - [ ] **Select** — Styled native or custom dropdown
 - [ ] **Textarea** — Multi-line text input
-- [ ] **Toggle** — Boolean on/off control
 
 ## Priority 2 — Feedback & Status
 

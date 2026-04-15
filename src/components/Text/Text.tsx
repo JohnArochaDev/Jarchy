@@ -14,19 +14,19 @@ export type TextType =
   | 'label'
 
 export interface TextProps {
-  /** The content rendered inside the text element. */
-  children: ReactNode
   /**
    * The HTML tag to render as.
    * @default 'p'
    */
   as?: TextType
+  /** The content rendered inside the text element. */
+  children: ReactNode
   /** Classname for custom styling */
   className?: string
 }
 
 export const Text = (props: TextProps) => {
-  const { children, as: Tag = 'p', className } = props
+  const { as: Tag = 'p', children, className } = props
 
   return (
     <Tag className={[styles.input, className].filter(Boolean).join(' ')}>
