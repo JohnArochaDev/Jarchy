@@ -29,6 +29,9 @@ export default defineConfig([
     },
     rules: {
 
+      // Prettier formatting (enforces printWidth, newlines, etc.)
+      'prettier/prettier': 'error',
+
       // Newline at end of file
       'eol-last': ['error', 'always'],
 
