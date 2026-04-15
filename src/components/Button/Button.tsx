@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { Themes } from '../../constants/types'
-import styles from './Button.module.scss'
+import styles from './styles.module.scss'
 
 type Types = 'submit' | 'reset' | 'button'
 
