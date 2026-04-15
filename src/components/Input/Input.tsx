@@ -53,7 +53,13 @@ export const Input = (props: InputProps) => {
       )}
 
       <input
-        className={`${styles.input} ${styles[`width-${size}`]} ${formattedErrors ? styles.error : ''}`}
+        className={[
+          styles.input,
+          styles[`width-${size}`],
+          formattedErrors && styles.error,
+        ]
+          .filter(Boolean)
+          .join(' ')}
         type={type}
         placeholder={placeholder ?? ''}
         value={inputValue}

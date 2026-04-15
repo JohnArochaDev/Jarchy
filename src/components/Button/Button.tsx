@@ -71,7 +71,9 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       disabled={disabled}
-      className={`${theme} ${styles.button} ${toggleClass()} ${classname ?? ''}`}
+      className={[theme, styles.button, toggleClass(), classname]
+        .filter(Boolean)
+        .join(' ')}
       onClick={clickWithToggle}
       type={type}
     >
