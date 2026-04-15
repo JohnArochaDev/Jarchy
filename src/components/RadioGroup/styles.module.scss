@@ -1,0 +1,7 @@
+@use '../../constants/colors';
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+}
