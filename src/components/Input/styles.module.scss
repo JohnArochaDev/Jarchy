@@ -1,3 +1,17 @@
+$width-xs: 120px;
+$width-sm: 200px;
+$width-md: 320px;
+$width-lg: 480px;
+$width-xl: 640px;
+$width-full: 100%;
+
+.width-xs   { width: $width-xs; }
+.width-sm   { width: $width-sm; }
+.width-md   { width: $width-md; }
+.width-lg   { width: $width-lg; }
+.width-xl   { width: $width-xl; }
+.width-full { width: $width-full; }
+
 .input {
   padding: 7px 16px;
   border-radius: 1em / 1.3em;

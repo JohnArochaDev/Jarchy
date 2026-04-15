@@ -17,9 +17,11 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     label: 'Label',
+    type: 'text',
     value: '',
     placeholder: 'Text here',
-    // errors: ['Invalid Format'], // for testing errors
+    // errors: ['Invalid Format', 'Only Alphanumeric Characters Allowed'], // for testing errors
     errors: [],
+    size: 'md',
   },
 }
