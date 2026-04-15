@@ -1,4 +1,6 @@
-// import styles from './styles.module.scss'
+import { ReactNode } from 'react'
+
+import styles from './styles.module.scss'
 
 export type TextType =
   | 'p'
@@ -12,12 +14,23 @@ export type TextType =
   | 'label'
 
 export interface TextProps {
-  value: string
+  /** The content rendered inside the text element. */
+  children: ReactNode
+  /**
+   * The HTML tag to render as.
+   * @default 'p'
+   */
   as?: TextType
+  /** Classname for custom styling */
+  className?: string
 }
 
 export const Text = (props: TextProps) => {
-  const { value, as: Tag = 'p' } = props
+  const { children, as: Tag = 'p', className } = props
 
-  return <Tag>{value}</Tag>
+  return (
+    <Tag className={[styles.input, className].filter(Boolean).join(' ')}>
+      {children}
+    </Tag>
+  )
 }

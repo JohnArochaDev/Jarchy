@@ -4,7 +4,7 @@
 
 - [x] **Button** — Buttons with basic functionality
 - [x] **Input** — Text Input for forms
-- [ ] **Text** — Styled text component with size, weight, and color variants
+- [x] **Text** — Styled text component with size and weight variants with classnames
 - [ ] **Checkbox** — Checked/unchecked/indeterminate states with label
 - [ ] **Radio / RadioGroup** — Single-select option list
 - [ ] **Select** — Styled native or custom dropdown

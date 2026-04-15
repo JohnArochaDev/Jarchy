@@ -6,6 +6,8 @@ import styles from './styles.module.scss'
 type Types = 'submit' | 'reset' | 'button'
 
 export interface ButtonProps {
+  /** Classname for custom styling */
+  classname?: string
   /** Disables the button, preventing interaction and applying disabled styling. */
   disabled?: boolean
   /**
@@ -39,6 +41,7 @@ export interface ButtonProps {
 
 export const Button = (props: ButtonProps) => {
   const {
+    classname,
     disabled,
     label = 'Button',
     onClick,
@@ -68,7 +71,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       disabled={disabled}
-      className={`${theme} ${styles.button} ${toggleClass()}`}
+      className={`${theme} ${styles.button} ${toggleClass()} ${classname ?? ''}`}
       onClick={clickWithToggle}
       type={type}
     >

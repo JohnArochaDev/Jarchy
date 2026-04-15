@@ -7,6 +7,8 @@ type InputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
 type InputType = 'text' | 'password' | 'email' | 'search' | 'url' | 'tel'
 
 export interface InputProps {
+  /** Classname for custom styling */
+  classname?: string
   /** List of error messages displayed below the input. */
   errors?: string[]
   /** Label text rendered above the input. */
@@ -29,6 +31,7 @@ export interface InputProps {
 
 export const Input = (props: InputProps) => {
   const {
+    classname,
     errors,
     label,
     placeholder,
@@ -43,7 +46,11 @@ export const Input = (props: InputProps) => {
 
   return (
     <>
-      {label && <p className={styles.label}>{label}</p>}
+      {label && (
+        <p className={[styles.label, classname].filter(Boolean).join(' ')}>
+          {label}
+        </p>
+      )}
 
       <input
         className={`${styles.input} ${styles[`width-${size}`]} ${formattedErrors ? styles.error : ''}`}
