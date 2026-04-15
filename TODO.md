@@ -8,7 +8,7 @@
 - [x] **Checkbox** — Checked/unchecked/indeterminate states with label
 - [x] **Radio / RadioGroup** — Single-select option list
 - [ ] **Select** — Styled native or custom dropdown
-- [ ] **Textarea** — Multi-line text input
+- [x] **Textarea** — Multi-line text input
 
 ## Priority 2 — Feedback & Status
 
