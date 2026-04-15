@@ -21,24 +21,17 @@ const FruitRadioGroup = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
       <Radio
-        // group="fruit"
+        group="fruit"
         value="apple"
         label="Apple"
         checked={selected === 'apple'}
         onChange={setSelected}
       />
       <Radio
-        // group="fruit"
+        group="fruit"
         value="banana"
         label="Banana"
         checked={selected === 'banana'}
-        onChange={setSelected}
-      />
-      <Radio
-        // group="fruit"
-        value="cherry"
-        label="Cherry"
-        checked={selected === 'cherry'}
         onChange={setSelected}
       />
     </div>
