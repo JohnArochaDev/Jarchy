@@ -18,6 +18,7 @@ $width-full: 100%;
   font-size: 14px;
   font-family: 'Geist Mono', monospace;
   border: 1px solid grey;
+  user-select: none;
 
   &:not(.error):focus {
     outline: none;

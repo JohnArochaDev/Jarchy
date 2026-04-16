@@ -10,6 +10,7 @@
   font-weight: 400;
   letter-spacing: 0.01em;
   cursor: pointer;
+  user-select: none;
 
   // Without this, the button flashed white between :active and the click-depress
   background: linear-gradient(180deg, var(--color-main) 0%, var(--color-main) 100%);
