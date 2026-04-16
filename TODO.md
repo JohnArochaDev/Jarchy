@@ -7,7 +7,7 @@
 - [x] **Text** — Styled text component with size and weight variants with classnames
 - [x] **Checkbox** — Checked/unchecked/indeterminate states with label
 - [x] **Radio / RadioGroup** — Single-select option list
-- [ ] **Select** — Styled native or custom dropdown
+- [x] **Select** — Styled native or custom dropdown
 - [x] **Textarea** — Multi-line text input
 
 ## Priority 2 — Feedback & Status
