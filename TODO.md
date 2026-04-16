@@ -13,7 +13,7 @@
 ## Priority 2 — Feedback & Status
 
 - [x] **Spinner** — Animated loading indicator
-- [ ] **Toast** — Temporary auto-dismissing notification
+- [x] **Toast** — Temporary auto-dismissing notification
 - [ ] **Alert** — Inline info / success / warning / error banners
 - [ ] **Badge** — Small inline label for statuses, counts, or tags
 - [ ] **Spacer** — Spacer component for styling
