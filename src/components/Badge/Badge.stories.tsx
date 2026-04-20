@@ -1,22 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Toast } from './Toast'
+import { Badge } from './Badge'
 
 const meta = {
-  title: 'Components/Toast',
-  component: Toast,
+  title: 'Components/Badge',
+  component: Badge,
   parameters: {
     layout: 'centered', // Styling for the component in the Storybook canvas
   },
   tags: ['autodocs'], // Creates documentation for the component
-} satisfies Meta<typeof Toast>
+} satisfies Meta<typeof Badge>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    message: 'Success!',
-    variant: 'success',
+    value: 'Open',
   },
 }

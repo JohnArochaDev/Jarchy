@@ -11,7 +11,7 @@ export interface ToastProps {
 }
 
 export const Toast = (props: ToastProps) => {
-  const { message, time = 4000, variant = 'success' } = props
+  const { message, time = 10000, variant = 'success' } = props
 
   const [timeLeft, setTimeLeft] = useState<number>(time)
 

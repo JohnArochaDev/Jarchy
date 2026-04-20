@@ -1,3 +1,4 @@
+export { Badge } from './components/Badge'
 export { Button } from './components/Button'
 export { Checkbox } from './components/Checkbox/Checkbox'
 export { Input } from './components/Input'

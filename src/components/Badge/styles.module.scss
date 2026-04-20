@@ -1,0 +1,18 @@
+@use '../../constants/colors';
+
+.badge {
+  color: var(--text-color);
+  background-color: var(--color-active-gradient-dark);
+  padding: 5px 10px;
+  border-radius: 1em / 1.3em;
+  border: 2px solid var(--color-main);
+  user-select: none;
+}
+
+.text {
+  color: var(--text-color);
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  user-select: none;
+}
