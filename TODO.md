@@ -15,7 +15,7 @@
 - [x] **Spinner** — Animated loading indicator
 - [x] **Toast** — Temporary auto-dismissing notification
 - [x] **Badge** — Small inline label for statuses, counts, or tags
-- [ ] **Spacer** — Spacer component for styling
+- [x] **Spacer** — Spacer component for styling
 
 ## Priority 3 — Layout & Structure
 

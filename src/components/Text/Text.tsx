@@ -29,7 +29,7 @@ export const Text = (props: TextProps) => {
   const { as: Tag = 'p', children, className } = props
 
   return (
-    <Tag className={[styles.input, className].filter(Boolean).join(' ')}>
+    <Tag className={[styles.text, className].filter(Boolean).join(' ')}>
       {children}
     </Tag>
   )

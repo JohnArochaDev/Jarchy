@@ -13,6 +13,7 @@ $width-full: 100%;
 .width-full { width: $width-full; }
 
 .input {
+  box-sizing: border-box;
   padding: 7px 16px;
   border-radius: 1em / 1.3em;
   font-size: 14px;
