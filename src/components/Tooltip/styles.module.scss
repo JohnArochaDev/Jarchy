@@ -20,6 +20,7 @@
   transition:
     opacity 150ms ease,
     visibility 150ms ease;
+    user-select: none;
 }
 
 .wrapper:hover .tooltip,

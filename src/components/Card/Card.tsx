@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 
+import { Divider } from '../Divider'
 import styles from './styles.module.scss'
 
 export interface CardProps {
@@ -17,7 +18,7 @@ export const Card = (props: CardProps) => {
       {title && (
         <>
           <h3 className={styles.header}>{title}</h3>{' '}
-          <hr className={styles.seperator} />{' '}
+          <Divider variant="horizontal" />
         </>
       )}
       {/* content */}

@@ -1,0 +1,16 @@
+.horizontal {
+  width: 90%;
+  border: none;
+  border-top: 1px solid grey;
+  margin: 0 auto;
+}
+
+.vertical {
+  display: inline-block;
+  border: none;
+  border-left: 1px solid grey;
+  height: 90%;
+  width: 0;
+  margin: auto;
+  align-self: stretch;
+}
