@@ -1,0 +1,53 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 100;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background-color: #1e1e1e38;
+  border: 1px solid #00000040;
+  color: #fff;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 150ms ease,
+    visibility 150ms ease;
+}
+
+.wrapper:hover .tooltip,
+.wrapper:focus-within .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top {
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  top: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  right: calc(100% + 7px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  left: calc(100% + 7px);
+  top: 50%;
+  transform: translateY(-50%);
+}
