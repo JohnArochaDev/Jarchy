@@ -20,7 +20,7 @@
 ## Priority 3 — Layout & Structure
 
 - [x] **Card** — Bordered surface with optional header, body, and footer slots
-- [ ] **Divider** — Horizontal or vertical separator line
+- [x] **Divider** — Horizontal or vertical separator line
 - [ ] **Container** — Max-width wrapper with consistent padding
 
 ## Priority 4 — Overlays & Floating UI
