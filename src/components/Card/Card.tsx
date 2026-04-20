@@ -4,9 +4,11 @@ import { Divider } from '../Divider'
 import styles from './styles.module.scss'
 
 export interface CardProps {
+  /** Optional title rendered in the card header above a divider. */
   title?: string
+  /** The main body content of the card. */
   content: ReactNode
-  /** Optional max width for the card (e.g. '400px', '50%') */
+  /** Optional max width for the card (e.g. '400px', '50%'). */
   maxWidth?: string
 }
 

@@ -6,14 +6,15 @@ export type SelectOption = {
 }
 
 export interface SelectProps {
+  /** Label text rendered above the select. */
   label?: string
+  /** The list of options to display in the dropdown. */
   options: SelectOption[]
+  /** Called with the selected option's value when the selection changes. */
   onChange: (value: string) => void
+  /** The controlled value of the select. */
   value: string
-  /**
-   * Controls the width of the select.
-   * @default 'md'
-   */
+  /** Placeholder text shown as a disabled, hidden first option when no value is selected. */
   placeholder?: string
 }
 

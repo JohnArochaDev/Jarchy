@@ -5,8 +5,17 @@ import styles from './styles.module.scss'
 export type ToastVariant = 'success' | 'error'
 
 export interface ToastProps {
+  /** The text displayed inside the toast notification. */
   message: string
+  /**
+   * How long the toast remains visible, in milliseconds.
+   * @default 10000
+   */
   time?: number
+  /**
+   * Visual style of the toast indicating success or failure.
+   * @default "success"
+   */
   variant?: ToastVariant
 }
 
