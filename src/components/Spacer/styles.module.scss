@@ -1,0 +1,30 @@
+$spacer-xs: 4px;
+$spacer-sm: 8px;
+$spacer-md: 16px;
+$spacer-lg: 24px;
+$spacer-xl: 48px;
+
+.spacer {
+  display: block;
+  flex-shrink: 0;
+}
+
+.vertical {
+  width: 100%;
+
+  &.size-xs { height: $spacer-xs; }
+  &.size-sm { height: $spacer-sm; }
+  &.size-md { height: $spacer-md; }
+  &.size-lg { height: $spacer-lg; }
+  &.size-xl { height: $spacer-xl; }
+}
+
+.horizontal {
+  height: 100%;
+
+  &.size-xs { width: $spacer-xs; }
+  &.size-sm { width: $spacer-sm; }
+  &.size-md { width: $spacer-md; }
+  &.size-lg { width: $spacer-lg; }
+  &.size-xl { width: $spacer-xl; }
+}
