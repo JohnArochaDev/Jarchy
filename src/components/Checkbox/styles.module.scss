@@ -7,6 +7,18 @@
   gap: 8px;
   cursor: pointer;
   user-select: none;
+  transform-origin: center;
+
+  transition:
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
 }
 
 .label {
@@ -15,17 +27,6 @@
   font-weight: 400;
   color: inherit;
   user-select: none;
-
-  transition:
-    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-  &:active {
-    transform: scale(0.92);
-  }
-
-  &:hover {
-    transform: scale(1.04);
-  }
 }
 
 .checkbox {
@@ -42,16 +43,7 @@
 
   transition:
     background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-  &:hover {
-    transform: scale(1.04);
-  }
-
-  &:active {
-    transform: scale(0.92);
-  }
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:checked {
     background: linear-gradient(180deg, var(--color-active-gradient-light) 0%, var(--color-active-gradient-light) 100%);
