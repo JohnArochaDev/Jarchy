@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Themes } from '../../constants/types'
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 type Types = 'submit' | 'reset' | 'button'
@@ -41,7 +42,7 @@ export interface ButtonProps {
 
 export const Button = (props: ButtonProps) => {
   const {
-    classname,
+    classname = '',
     disabled,
     label = 'Button',
     onClick,
@@ -71,9 +72,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       disabled={disabled}
-      className={[theme, styles.button, toggleClass(), classname]
-        .filter(Boolean)
-        .join(' ')}
+      className={cs([theme, styles.button, toggleClass(), classname])}
       onClick={clickWithToggle}
       type={type}
     >

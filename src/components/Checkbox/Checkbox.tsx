@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Themes } from '../../constants/types'
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export interface CheckboxProps {
@@ -29,11 +30,11 @@ export interface CheckboxProps {
 export const Checkbox = (props: CheckboxProps) => {
   const {
     checked = false,
-    className,
-    containerClassname,
+    className = '',
+    containerClassname = '',
     disabled,
     label,
-    labelClassname,
+    labelClassname = '',
     theme = 'theme-black',
   } = props
 
@@ -46,24 +47,16 @@ export const Checkbox = (props: CheckboxProps) => {
   }
 
   return (
-    <label
-      className={[theme, styles.container, containerClassname]
-        .filter(Boolean)
-        .join(' ')}
-    >
+    <label className={cs([theme, styles.container, containerClassname])}>
       <input
-        className={[styles.checkbox, className].filter(Boolean).join(' ')}
+        className={cs([styles.checkbox, className])}
         type="checkbox"
         checked={checkedValue}
         onClick={handleClick}
         disabled={disabled}
       />
       {label && (
-        <span
-          className={[styles.label, labelClassname].filter(Boolean).join(' ')}
-        >
-          {label}
-        </span>
+        <span className={cs([styles.label, labelClassname])}>{label}</span>
       )}
     </label>
   )

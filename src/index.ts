@@ -2,6 +2,12 @@ export { Badge } from './components/Badge'
 export { Button } from './components/Button'
 export { Card } from './components/Card'
 export { Checkbox } from './components/Checkbox/Checkbox'
+export type {
+  FlexDirection,
+  JustifyContent,
+  SpacingSize,
+} from './components/Container'
+export { Container } from './components/Container'
 export type { DividerType } from './components/Divider'
 export { Divider } from './components/Divider'
 export { Input } from './components/Input'

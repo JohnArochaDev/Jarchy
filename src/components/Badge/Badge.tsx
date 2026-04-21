@@ -1,4 +1,5 @@
 import { Themes } from '../../constants/types'
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export interface BadgeProps {
@@ -16,7 +17,7 @@ export interface BadgeProps {
 export const Badge = (props: BadgeProps) => {
   const { theme = 'theme-green', value } = props
   return (
-    <div className={[theme, styles.badge].filter(Boolean).join(' ')}>
+    <div className={cs([theme, styles.badge])}>
       <span className={styles.text}>{value}</span>
     </div>
   )

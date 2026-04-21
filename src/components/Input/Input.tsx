@@ -1,3 +1,4 @@
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 type InputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
@@ -31,7 +32,7 @@ export interface InputProps {
 
 export const Input = (props: InputProps) => {
   const {
-    classname,
+    classname = '',
     errors,
     label,
     onChange,
@@ -45,20 +46,14 @@ export const Input = (props: InputProps) => {
 
   return (
     <>
-      {label && (
-        <p className={[styles.label, classname].filter(Boolean).join(' ')}>
-          {label}
-        </p>
-      )}
+      {label && <p className={cs([styles.label, classname])}>{label}</p>}
 
       <input
-        className={[
+        className={cs([
           styles.input,
           styles[`width-${size}`],
-          formattedErrors && styles.error,
-        ]
-          .filter(Boolean)
-          .join(' ')}
+          (formattedErrors && styles.error) ?? '',
+        ])}
         type={type}
         placeholder={placeholder ?? ''}
         value={value}

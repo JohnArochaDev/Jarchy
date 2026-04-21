@@ -1,3 +1,4 @@
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export interface TextAreaProps {
@@ -16,21 +17,17 @@ export interface TextAreaProps {
 }
 
 export const TextArea = (props: TextAreaProps) => {
-  const { className, errors, label, onChange, placeholder, value } = props
+  const { className = '', errors, label, onChange, placeholder, value } = props
 
   const formattedErrors =
     typeof errors === 'string' ? errors : errors?.join(', ')
 
   return (
     <>
-      {label && (
-        <p className={[styles.label, className].filter(Boolean).join(' ')}>
-          {label}
-        </p>
-      )}
+      {label && <p className={cs([styles.label, className])}>{label}</p>}
       <textarea
         placeholder={placeholder}
-        className={[styles.input, className].filter(Boolean).join(' ')}
+        className={cs([styles.input, className])}
         value={value}
         onChange={(e) => onChange?.(e.target.value)}
       />

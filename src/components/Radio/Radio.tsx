@@ -1,4 +1,5 @@
 import { Themes } from '../../constants/types'
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export interface RadioProps {
@@ -28,24 +29,20 @@ export interface RadioProps {
 export const Radio = (props: RadioProps) => {
   const {
     checked,
-    className,
-    containerClassname,
+    className = '',
+    containerClassname = '',
     group,
     label,
-    labelClassname,
+    labelClassname = '',
     onChange,
     theme = 'theme-black',
     value,
   } = props
 
   return (
-    <label
-      className={[theme, styles.container, containerClassname]
-        .filter(Boolean)
-        .join(' ')}
-    >
+    <label className={cs([theme, styles.container, containerClassname])}>
       <input
-        className={[styles.checkbox, className].filter(Boolean).join(' ')}
+        className={cs([styles.checkbox, className])}
         type="radio"
         name={group}
         value={value}
@@ -53,11 +50,7 @@ export const Radio = (props: RadioProps) => {
         onChange={() => onChange(value)}
       />
       {label && (
-        <span
-          className={[styles.label, labelClassname].filter(Boolean).join(' ')}
-        >
-          {label}
-        </span>
+        <span className={cs([styles.label, labelClassname])}>{label}</span>
       )}
     </label>
   )

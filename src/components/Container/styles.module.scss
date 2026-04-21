@@ -1,0 +1,26 @@
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 48px;
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+
+  &.padding-xs { padding: $spacing-xs; }
+  &.padding-sm { padding: $spacing-sm; }
+  &.padding-md { padding: $spacing-md; }
+  &.padding-lg { padding: $spacing-lg; }
+  &.padding-xl { padding: $spacing-xl; }
+
+  &.gap-xs { gap: $spacing-xs; }
+  &.gap-sm { gap: $spacing-sm; }
+  &.gap-md { gap: $spacing-md; }
+  &.gap-lg { gap: $spacing-lg; }
+  &.gap-xl { gap: $spacing-xl; }
+
+  &.row { flex-direction: row; }
+  &.column { flex-direction: column; }
+}

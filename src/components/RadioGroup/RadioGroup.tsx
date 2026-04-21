@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Themes } from '../../constants/types'
+import { cs } from '../../constants/utils'
 import { Radio } from '../Radio'
 import styles from './styles.module.scss'
 
@@ -29,7 +30,7 @@ export interface RadioGroupProps {
 
 export const RadioGroup = (props: RadioGroupProps) => {
   const {
-    className,
+    className = '',
     defaultValue,
     group,
     onChange,
@@ -45,7 +46,7 @@ export const RadioGroup = (props: RadioGroupProps) => {
   }
 
   return (
-    <div className={[styles.container, className].filter(Boolean).join(' ')}>
+    <div className={cs([styles.container, className])}>
       {options.map((option) => (
         <Radio
           key={option.value}

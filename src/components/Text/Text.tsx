@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export type TextType =
@@ -26,11 +27,7 @@ export interface TextProps {
 }
 
 export const Text = (props: TextProps) => {
-  const { as: Tag = 'p', children, className } = props
+  const { as: Tag = 'p', children, className = '' } = props
 
-  return (
-    <Tag className={[styles.text, className].filter(Boolean).join(' ')}>
-      {children}
-    </Tag>
-  )
+  return <Tag className={cs([styles.text, className])}>{children}</Tag>
 }

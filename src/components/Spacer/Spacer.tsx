@@ -1,3 +1,4 @@
+import { cs } from '../../constants/utils'
 import styles from './styles.module.scss'
 
 export type SpacerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -20,9 +21,7 @@ export const Spacer = (props: SpacerProps) => {
 
   return (
     <div
-      className={[styles.spacer, styles[direction], styles[`size-${size}`]]
-        .filter(Boolean)
-        .join(' ')}
+      className={cs([styles.spacer, styles[direction], styles[`size-${size}`]])}
       aria-hidden="true"
     />
   )
