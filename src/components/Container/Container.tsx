@@ -50,7 +50,7 @@ export const Container = (props: ContainerProps) => {
     classname = '',
     flexDirection = 'column',
     gap = 'md',
-    justifyContent = 'end',
+    justifyContent = 'start',
     padding = 'md',
   } = props
 

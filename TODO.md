@@ -21,7 +21,7 @@
 
 - [x] **Card** — Bordered surface with optional header, body, and footer slots
 - [x] **Divider** — Horizontal or vertical separator line
-- [ ] **Container** — Max-width wrapper with consistent padding
+- [x] **Container** — Max-width wrapper with consistent padding
 
 ## Priority 4 — Overlays & Floating UI
 

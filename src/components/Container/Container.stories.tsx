@@ -18,7 +18,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const ColumnStack: Story = {
-  args: { children: null, flexDirection: 'column', gap: 'md', padding: 'md' },
+  args: {
+    children: null,
+    flexDirection: 'column',
+    gap: 'md',
+    padding: 'md',
+    justifyContent: 'start',
+  },
   render: (args) => (
     <Container {...args}>
       <Text as="h2">Title</Text>
