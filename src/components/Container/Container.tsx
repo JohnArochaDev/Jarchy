@@ -5,7 +5,13 @@ import styles from './styles.module.scss'
 
 export type SpacingSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type FlexDirection = 'column' | 'row'
-export type JustifyContent = 'center' | 'start' | 'end'
+export type JustifyContent =
+  | 'center'
+  | 'start'
+  | 'end'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly'
 
 export interface ContainerProps {
   /**
@@ -59,17 +65,9 @@ export const Container = (props: ContainerProps) => {
     padding && styles[`padding-${padding}`],
     gap && styles[`gap-${gap}`],
     flexDirection && styles[`${flexDirection}`],
+    justifyContent && styles[`justify-${justifyContent}`],
     classname,
   ])
 
-  const alignmentStyle =
-    flexDirection === 'column'
-      ? { alignItems: justifyContent }
-      : { justifyContent }
-
-  return (
-    <Tag className={classes} style={alignmentStyle}>
-      {children}
-    </Tag>
-  )
+  return <Tag className={classes}>{children}</Tag>
 }

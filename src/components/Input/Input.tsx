@@ -45,8 +45,8 @@ export const Input = (props: InputProps) => {
   const formattedErrors = errors?.join(', ')
 
   return (
-    <>
-      {label && <p className={cs([styles.label, classname])}>{label}</p>}
+    <div className={cs([styles[`width-${size}`], classname])}>
+      {label && <p className={styles.label}>{label}</p>}
 
       <input
         className={cs([
@@ -63,6 +63,6 @@ export const Input = (props: InputProps) => {
       {formattedErrors && (
         <p className={styles.bottomError}>{formattedErrors}</p>
       )}
-    </>
+    </div>
   )
 }

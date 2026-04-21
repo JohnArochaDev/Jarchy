@@ -1,0 +1,73 @@
+@use '../../constants/colors';
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border: 1px solid var(--color-shadow-hover);
+  border-radius: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 70vw;
+  max-width: 70%;
+  color: var(--text-color);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px #00000010,
+    0 0 12px 0px #00000022;
+}
+
+.header {
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.seperator {
+  width: 90%;
+  border-top: 1px solid grey;
+}
+
+.content {
+  font-weight: 400;
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.modalButton {
+  min-width: 17vw;
+}
+
+.closeButton {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.5;
+  padding: 4px;
+  border-radius: 4px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}

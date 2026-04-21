@@ -25,7 +25,7 @@
 
 ## Priority 4 — Overlays & Floating UI
 
-- [ ] **Modal** — Focus-trapped overlay with backdrop and close handling
+- [x] **Modal** — Focus-trapped overlay with backdrop and close handling
 - [x] **Tooltip** — Small label shown on hover
 
 ## Priority 5 - Non - Mandatory
