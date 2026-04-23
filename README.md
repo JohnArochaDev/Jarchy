@@ -23,6 +23,12 @@ npm install @johnarochadev/jarchy
 
 ## Usage
 
+Add the following import once to the entry of your project (main.tsx):
+
+```ts
+import '@johnarochadev/jarchy/dist/index.css'
+```
+
 Import any component directly from the package:
 
 ```tsx
