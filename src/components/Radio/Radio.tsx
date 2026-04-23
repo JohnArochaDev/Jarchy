@@ -40,7 +40,7 @@ export const Radio = (props: RadioProps) => {
   } = props
 
   return (
-    <label className={cs([theme, styles.container, containerClassname])}>
+    <label className={cs([styles[theme], styles.container, containerClassname])}>
       <input
         className={cs([styles.checkbox, className])}
         type="radio"

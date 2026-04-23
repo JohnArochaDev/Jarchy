@@ -47,7 +47,7 @@ export const Checkbox = (props: CheckboxProps) => {
   }
 
   return (
-    <label className={cs([theme, styles.container, containerClassname])}>
+    <label className={cs([styles[theme], styles.container, containerClassname])}>
       <input
         className={cs([styles.checkbox, className])}
         type="checkbox"

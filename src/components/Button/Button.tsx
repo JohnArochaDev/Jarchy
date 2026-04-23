@@ -72,7 +72,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       disabled={disabled}
-      className={cs([theme, styles.button, toggleClass(), classname])}
+      className={cs([styles[theme], styles.button, toggleClass(), classname])}
       onClick={clickWithToggle}
       type={type}
     >

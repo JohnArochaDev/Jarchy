@@ -17,7 +17,7 @@ export interface BadgeProps {
 export const Badge = (props: BadgeProps) => {
   const { theme = 'theme-green', value } = props
   return (
-    <div className={cs([theme, styles.badge])}>
+    <div className={cs([styles[theme], styles.badge])}>
       <span className={styles.text}>{value}</span>
     </div>
   )
