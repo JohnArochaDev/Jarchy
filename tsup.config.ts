@@ -6,5 +6,5 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   dts: true,
   external: ['react'],
-  esbuildPlugins: [sassPlugin({ type: 'css-text' })],
+  esbuildPlugins: [sassPlugin({ type: 'local-css' })],
 })
