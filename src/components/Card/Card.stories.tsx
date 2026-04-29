@@ -20,38 +20,31 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const WithTextAndTitle: Story = {
-  args: { content: '', maxWidth: '400px' },
+  args: { children: '', maxWidth: '400px' },
   render: (args) => (
-    <Card
-      {...args}
-      title="About"
-      content={
-        <div style={{ textIndent: '1rem' }}>
-          <Text as="p">
-            This is a card with a simple text body. It can be used to display
-            summaries, descriptions, or any other short-form content.
-          </Text>
-        </div>
-      }
-    />
+    <Card {...args} title="About">
+      <div style={{ textIndent: '1rem' }}>
+        <Text as="p">
+          This is a card with a simple text body. It can be used to display
+          summaries, descriptions, or any other short-form content.
+        </Text>
+      </div>
+    </Card>
   ),
 }
 
 export const WithTextNoTitle: Story = {
-  args: { content: '', maxWidth: '400px' },
+  args: { children: '', maxWidth: '400px' },
   render: (args) => (
-    <Card
-      {...args}
-      content={
-        <div style={{ textIndent: '1rem' }}>
-          <Text as="p">
-            This is a card with a simple text body. It has no title. It can be
-            used to display summaries, descriptions, or any other short-form
-            content.
-          </Text>
-        </div>
-      }
-    />
+    <Card {...args}>
+      <div style={{ textIndent: '1rem' }}>
+        <Text as="p">
+          This is a card with a simple text body. It has no title. It can be
+          used to display summaries, descriptions, or any other short-form
+          content.
+        </Text>
+      </div>
+    </Card>
   ),
 }
 
@@ -60,46 +53,43 @@ const LoginFormCard = () => {
   const [password, setPassword] = useState('')
 
   return (
-    <Card
-      title="Sign In"
-      content={
-        <>
-          <Input
-            label="Email"
-            type="email"
-            placeholder="you@example.com"
-            value={email}
-            onChange={setEmail}
-            size="full"
-          />
-          <Spacer size="sm" />
-          <Input
-            label="Password"
-            type="password"
-            placeholder="••••••••"
-            value={password}
-            onChange={setPassword}
-            size="full"
-          />
-          <Spacer size="md" />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <Button label="Log In" onClick={() => {}} type="submit" />
-            <Spacer direction="horizontal" size="xl" />
-            <Button label="Register" onClick={() => {}} type="submit" />
-          </div>
-        </>
-      }
-    />
+    <Card title="Sign In">
+      <>
+        <Input
+          label="Email"
+          type="email"
+          placeholder="you@example.com"
+          value={email}
+          onChange={setEmail}
+          size="full"
+        />
+        <Spacer size="sm" />
+        <Input
+          label="Password"
+          type="password"
+          placeholder="••••••••"
+          value={password}
+          onChange={setPassword}
+          size="full"
+        />
+        <Spacer size="md" />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <Button label="Log In" onClick={() => {}} type="submit" />
+          <Spacer direction="horizontal" size="xl" />
+          <Button label="Register" onClick={() => {}} type="submit" />
+        </div>
+      </>
+    </Card>
   )
 }
 
 export const LoginForm: Story = {
-  args: { content: '' },
+  args: { children: '' },
   render: () => <LoginFormCard />,
 }

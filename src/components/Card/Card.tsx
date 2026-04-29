@@ -7,13 +7,13 @@ export interface CardProps {
   /** Optional title rendered in the card header above a divider. */
   title?: string
   /** The main body content of the card. */
-  content: ReactNode
+  children: ReactNode
   /** Optional max width for the card (e.g. '400px', '50%'). */
   maxWidth?: string
 }
 
 export const Card = (props: CardProps) => {
-  const { title, content, maxWidth } = props
+  const { title, children, maxWidth } = props
   return (
     <div className={styles.card} style={maxWidth ? { maxWidth } : undefined}>
       {/* header */}
@@ -24,7 +24,7 @@ export const Card = (props: CardProps) => {
         </>
       )}
       {/* content */}
-      <div className={styles.content}>{content}</div>
+      <div className={styles.content}>{children}</div>
     </div>
   )
 }
